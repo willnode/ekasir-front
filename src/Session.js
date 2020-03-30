@@ -1,6 +1,6 @@
 
 
-const serverUrl = process.env.NODE_ENV === 'production' ? 'https://api.tryout.sanggaredukasi.com' : 'http://localhost/tryout-ci';
+const serverUrl = process.env.NODE_ENV === 'production' ? 'https://api.wellosoft.net/ekasir' : 'http://localhost/ekasir-ci';
 const serverHandler = async (url,method,body) => {
 	let response;
 	try {

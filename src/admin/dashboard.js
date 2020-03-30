@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import session from '../Session';
 
-
 export default function () {
+
 	return (
 		<div>
-			Hello World
+			<h1>Kasir</h1>
 		</div>
 	)
 }

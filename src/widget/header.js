@@ -20,7 +20,7 @@ function HeaderLogon() {
     <li className="nav-item dropdown no-arrow">
       <a className="nav-link dropdown-toggle" href="/#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <span className="mr-2 d-none d-lg-inline text-gray-600 small">{session.login.nama}</span>
-        <img alt="Profile Pic" className="img-profile rounded-circle" src={session.login.avatar ? session.baseUrl(`uploads/avatar/${session.login.avatar}`) : '/assets/user.png'} />
+        <img alt="Profile Pic" className="img-profile rounded-circle" src={session.login.avatar ? session.baseUrl(`uploads/avatar/${session.login.avatar}`) : process.env.PUBLIC_URL+'/assets/user.png'} />
       </a>
       <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
         <Link className="dropdown-item" to={`/${session.login.role}/`}>
@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <nav className="bg-white navbar navbar-expand navbar-light shadow sticky-top topbar">
       <Link className="navbar-brand" to='/'>
-        <img src="/assets/nogo-navbar-sm.png" height="40" width="auto" alt="logo"/>
+        <img src={process.env.PUBLIC_URL + "/assets/nogo-navbar-sm.png"} height="40" width="auto" alt="logo"/>
       </Link>
       <Switch>
         <Route path="/offline">
