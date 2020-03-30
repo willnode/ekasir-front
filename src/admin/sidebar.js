@@ -14,11 +14,11 @@ export default function () {
 					Kasir
 				</Link>
 				<div className="dropdown-divider"></div>
-				<Link className="dropdown-item" to="/admin/barang">
+				<Link className="dropdown-item" to="/admin/barang/">
 					<i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 					Barang
 				</Link>
-				<Link className="dropdown-item" to="/admin/transaksi">
+				<Link className="dropdown-item" to="/admin/transaksi/">
 					<i className="fas fa-money-bill fa-sm fa-fw mr-2 text-gray-400"></i>
 					History
 				</Link>

@@ -76,4 +76,5 @@ if (window.sessionStorage.getItem('appauth')) {
 	session.login = JSON.parse(window.localStorage.getItem('applogin'));
 }
 window.session = session;
+window.callbacks = [];
 export default session;
