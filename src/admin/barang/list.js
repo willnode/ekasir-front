@@ -1,5 +1,6 @@
 import React from 'react';
 import { controlTable, controlButtons, controlDelete } from '../../widget/controls';
+import session from '../../Session';
 
 export default function () {
 	return <div>
@@ -15,11 +16,13 @@ export default function () {
 			field: 'barang_nama',
 			title: 'Nama',
 		}, {
-			field: 'barang_harga_jual',
-			title: 'Harga',
+			field: 'barang_modal',
+			title: 'Modal',
+			formatter: session.formatRupiah,
 		}, {
-			field: 'barang_sisa_stok',
-			title: 'Stok',
+			field: 'barang_harga',
+			title: 'Harga',
+			formatter: session.formatRupiah,
 		}, {
 			field: 'barang_id',
 			title: 'Action',

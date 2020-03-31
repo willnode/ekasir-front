@@ -5,13 +5,14 @@ import { controlPost } from '../widget/controls';
 function ListBarang({ data, idx, setQty }) {
 	return <div className="card my-2">
 		<input type="hidden" name={`struk[${idx}][barang_id]`} defaultValue={data.barang_id} />
-		<input type="hidden" name={`struk[${idx}][struk_harga_barang]`} defaultValue={data.barang_harga_jual} />
+		<input type="hidden" name={`struk[${idx}][struk_modal_barang]`} defaultValue={data.barang_modal} />
+		<input type="hidden" name={`struk[${idx}][struk_harga_barang]`} defaultValue={data.barang_harga} />
 		<div className="row no-gutters">
 			<div className="col-md-6 form-control px-2">
 				{data.barang_nama}
 			</div>
 			<div className="col-md-3 col-sm-6 form-control px-2">
-				{session.formatRupiah(data.barang_harga_jual)}
+				{session.formatRupiah(data.barang_harga)}
 			</div>
 			<div className="col-md-3 col-sm-6">
 				<input type="number" className="form-control" name={`struk[${idx}][struk_qty]`} value={data.struk_qty} onChange={setQty} />

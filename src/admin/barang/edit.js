@@ -17,9 +17,9 @@ export default function ({ id }) {
 			{!data ? '' : (
 			<form onSubmit={controlPost('barang', id)}>
 				{controlInput({name: 'barang_nama', label: 'Nama', value: data.barang_nama, required: true})}
-				{controlInput({name: 'barang_harga_beli', label: 'Harga Beli', value: data.barang_harga_beli, required: true, type: 'number'})}
-				{controlInput({name: 'barang_harga_jual', label: 'Harga Jual', value: data.barang_harga_jual, required: true, type: 'number'})}
-				{controlInput({name: 'barang_sisa_stok', label: 'Sisa Stok', value: data.barang_sisa_stok, required: true, type: 'number'})}
+				{controlInput({name: 'barang_kode', label: 'Kode', value: data.barang_kode, required: true})}
+				{controlInput({name: 'barang_modal', label: 'Harga Beli', value: data.barang_modal, required: true, type: 'number'})}
+				{controlInput({name: 'barang_harga', label: 'Harga Jual', value: data.barang_harga, required: true, type: 'number'})}
 				{controlSubmit()}
 			</form>)}
 			{controlBack()}

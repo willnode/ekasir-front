@@ -22,6 +22,10 @@ export default function () {
 					<i className="fas fa-money-bill fa-sm fa-fw mr-2 text-gray-400"></i>
 					History
 				</Link>
+				<Link className="dropdown-item" to="/admin/transaksi/laporan/harian">
+					<i className="fas fa-money-bill fa-sm fa-fw mr-2 text-gray-400"></i>
+					Laporan
+				</Link>
 			</div>
 			</li>
 		</>

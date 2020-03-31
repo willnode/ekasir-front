@@ -2,15 +2,22 @@ import React from 'react';
 import Dashboard from './dashboard';
 import Profile from './profile';
 import Transaksi from './transaksi/list';
+import TransaksiDetail from './transaksi/detail';
 import Barang from './barang/list';
 import BarangEdit from './barang/edit';
 import {
 	Redirect,
 	Switch,
-	Route
+	Route,
+	useParams
 } from 'react-router-dom';
-
 import session from '../Session';
+
+function P() {
+	const { id } = useParams();
+	return <TransaksiDetail  id={id} key={id}/>
+}
+
 export default function () {
 	return !session.login || session.login.role !== 'admin' ? <Redirect to="/login" /> : (
 		<div className="container mt-4">
@@ -23,6 +30,9 @@ export default function () {
 				</Route>
 				<Route exact strict path="/admin/transaksi/">
 					<Transaksi />
+				</Route>
+				<Route exact strict path="/admin/transaksi/laporan/:id">
+					<P/>
 				</Route>
 				<Route exact strict path="/admin/barang/">
 					<Barang />
