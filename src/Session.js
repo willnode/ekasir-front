@@ -22,7 +22,7 @@ const serverHandler = async (url,method,body) => {
 		});
 		response = await result.json();
 	} catch (error) {
-		session.history.push('/offline?reason='+encodeURIComponent(error));
+		session.history.push('/offline?reason='+encodeURIComponent(error)+'&uri='+encodeURIComponent((url+'').replace(session.baseUrl(''), '')));
 		throw error;
 	} finally {
 		if (response.status !== 'Error') {

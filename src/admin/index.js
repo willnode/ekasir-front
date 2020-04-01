@@ -3,6 +3,7 @@ import Dashboard from './dashboard';
 import Profile from './profile';
 import Transaksi from './transaksi/list';
 import TransaksiDetail from './transaksi/detail';
+import TransaksiLaporan from './transaksi/laporan';
 import Barang from './barang/list';
 import BarangEdit from './barang/edit';
 import {
@@ -15,7 +16,7 @@ import session from '../Session';
 
 function P() {
 	const { id } = useParams();
-	return <TransaksiDetail  id={id} key={id}/>
+	return <TransaksiLaporan  id={id} key={id}/>
 }
 
 export default function () {
@@ -33,6 +34,9 @@ export default function () {
 				</Route>
 				<Route exact strict path="/admin/transaksi/laporan/:id">
 					<P/>
+				</Route>
+				<Route exact strict path="/admin/transaksi/detail/:id">
+					<TransaksiDetail/>
 				</Route>
 				<Route exact strict path="/admin/barang/">
 					<Barang />

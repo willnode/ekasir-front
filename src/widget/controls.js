@@ -300,7 +300,7 @@ function controlDelete(url) {
 function controlPost(url, redirect) {
 	return (e) => {
 		(session.postByRole(url, session.extract(e))
-		.then(() => redirect ? (session.message = 'Berhasil disimpan' && redirect()) : session.setMessage('Berhasil disimpan'))
+		.then((d) => redirect ? (session.message = 'Berhasil disimpan' && redirect(d)) : session.setMessage('Berhasil disimpan'))
 		.catch((e) => session.setError(e))
 		)
 	}

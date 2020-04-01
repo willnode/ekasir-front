@@ -1,5 +1,5 @@
 import React from 'react';
-import { controlTable } from '../../widget/controls';
+import { controlTable, controlButtons } from '../../widget/controls';
 
 export default function () {
 	return <div>
@@ -11,6 +11,15 @@ export default function () {
 		}, {
 			field: 'transaksi_total',
 			title: 'Total',
+		}, {
+			field: 'transaksi_id',
+			title: 'Action',
+			formatter: (value) => (controlButtons([{
+				href: `detail/${value}`,
+				style: 'btn btn-sm btn-primary',
+				icon: 'fa fa-file',
+				width: 1,
+			}]))
 		}])
 		}
 	</div>

@@ -53,3 +53,22 @@ input[type='file'] {
 .fixed-table-toolbar > div {
 	margin-bottom: 1em;
 }
+
+
+.ticketPrint h1 {
+	text-align: center;
+}
+.ticketPrint table {
+	width: 100%;
+	margin: 3em 1em;
+}
+.ticketPrint td, .ticketPrint th {
+	padding: 0.5em 0;
+	font-size: 1.5em;
+}
+
+@media print {
+	.ticketPrint .btn {
+		display: none;
+	}
+  }

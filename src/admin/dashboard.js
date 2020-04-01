@@ -34,7 +34,7 @@ export default function () {
 		}
 	})
 	return (
-		<form onSubmit={controlPost('transaksi')}>
+		<form onSubmit={controlPost('transaksi', (r) => session.history.push(`/admin/transaksi/detail/${r.row_id}`))}>
 			<h1>Kasir</h1>
 			<p>Input barang:</p>
 			{
@@ -97,7 +97,7 @@ export default function () {
 			<div style={{display: checkout ? 'block' : 'none'}}>
 				<p className="h4">Total: {session.formatRupiah(checkout)}</p>
 				<p className="h4">Uang: </p>
-				<p className="h4"><input className="form-control" id="moneyInput" type="number"
+				<p className="h4"><input name="transaksi_uang" className="form-control" id="moneyInput" type="number"
 					required min={0} step={100} value={money} onChange={(e) => setMoney(e.target.value)}
 					onInput={(e) => {
 						if (e.key === 'Enter') {
