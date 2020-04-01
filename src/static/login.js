@@ -56,9 +56,6 @@ export default function Login() {
                         Login
                     </button>
                     </form>
-                    <div className="my-2 text-center">
-                      <Link className="small" to="/register">Belum punya akun?</Link>
-                    </div>
                   </div>
                 </div>
               </div>
