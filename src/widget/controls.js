@@ -299,7 +299,7 @@ function controlDelete(url,id) {
 
 function controlPost(url,id) {
 	return (e) => {
-		(session.postByRole(id ? url+'/' + id : url, session.extract(e))
+		(session.postByRole(url+'/' + id, session.extract(e))
 		.then(() => id === 0 ? (session.message = 'Berhasil disimpan' && session.history.goBack()) : session.setMessage('Berhasil disimpan'))
 		.catch((e) => session.setError(e))
 		)

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import session from '../Session';
-import { Link } from 'react-router-dom';
 
 async function form_login(e) {
   const data = session.extract(e);
@@ -56,9 +55,6 @@ export default function Login() {
                         Login
                     </button>
                     </form>
-                    <div className="my-2 text-center">
-                      <Link className="small" to="/register">Belum punya akun?</Link>
-                    </div>
                   </div>
                 </div>
               </div>

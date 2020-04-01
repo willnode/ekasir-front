@@ -37,6 +37,9 @@ export default function () {
 				<Route exact strict path="/admin/barang/">
 					<Barang />
 				</Route>
+				<Route strict path="/admin/barang/create">
+					<BarangEdit id={0}/>
+				</Route>
 				<Route strict path="/admin/barang/edit/:id">
 					<BarangEdit />
 				</Route>

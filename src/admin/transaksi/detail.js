@@ -12,11 +12,11 @@ export default function ({id}) {
 		{ type: 'linear', position: 'right'},
 	];
 	return <Page src={'laporan/' + id} dataCallback={setData}>
-		<p className="text-center"><div className="btn-group" role="group">
+		<div className="text-center my-2"><div className="btn-group" role="group">
 			<Link to="harian" className="btn btn-primary">Harian</Link>
 			<Link to="mingguan" className="btn btn-primary">Mingguan</Link>
 			<Link to="bulanan" className="btn btn-primary">Bulanan</Link>
-		</div></p>
+		</div></div>
 
 		{data ?
 			<div>
