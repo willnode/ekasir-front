@@ -288,19 +288,19 @@ function controlTable(data, columns) {
 		</>
 }
 
-function controlDelete(url,id) {
+function controlDelete(url) {
 	return (_) => {
-		(session.deleteByRole(url+'/'+id)
+		(session.deleteByRole(url)
 		.then(() => session.setMessage('Berhasil dihapus'))
 		.catch((e) => session.setError(e))
 		)
 	}
 }
 
-function controlPost(url,id) {
+function controlPost(url, redirect) {
 	return (e) => {
-		(session.postByRole(url+'/' + id, session.extract(e))
-		.then(() => id === 0 ? (session.message = 'Berhasil disimpan' && session.history.goBack()) : session.setMessage('Berhasil disimpan'))
+		(session.postByRole(url, session.extract(e))
+		.then(() => redirect ? (session.message = 'Berhasil disimpan' && redirect()) : session.setMessage('Berhasil disimpan'))
 		.catch((e) => session.setError(e))
 		)
 	}

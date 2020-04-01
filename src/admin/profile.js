@@ -36,7 +36,7 @@ export default function () {
 				data ? (<form onSubmit={submit}>
 					{controlDiv({label: 'ID', value: session.formatID(form.login_id), class: 'd-block' })}
 					{controlInput({name: 'username', label: 'Username', value: form.username, required: true})}
-					{controlInput({name: 'nama', label: 'Nama', value: form.nama, required: true, minLength: 3})}
+					{controlInput({name: 'name', label: 'Name', value: form.name, required: true, minLength: 3})}
 					{controlImage({name: 'avatar', label: 'Avatar', value: form.avatar, folder: 'avatar'})}
 					<hr/>
 					{controlInput({name: 'password', label: 'Password', type:'password', minLength: 8, autoComplete: 'new-password'})}

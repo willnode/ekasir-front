@@ -4,6 +4,7 @@ import {
 	controlInput, controlSubmit, controlBack, controlPost
 } from '../../widget/controls';
 import { useParams } from 'react-router-dom';
+import session from '../../Session';
 
 
 export default function ({ id }) {
@@ -15,7 +16,7 @@ export default function ({ id }) {
 	return (
 		<Page src={'barang/' + id} dataCallback={setData}>
 			{!data ? '' : (
-			<form onSubmit={controlPost('barang', id)}>
+			<form onSubmit={controlPost(`barang/${id}`, id === 0 ? ()=>session.history.goBack(): null)}>
 				{controlInput({name: 'barang_nama', label: 'Nama', value: data.barang_nama, required: true})}
 				{controlInput({name: 'barang_kode', label: 'Kode', value: data.barang_kode, required: true})}
 				{controlInput({name: 'barang_modal', label: 'Harga Beli', value: data.barang_modal, required: true, type: 'number'})}

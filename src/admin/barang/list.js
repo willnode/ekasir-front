@@ -31,7 +31,7 @@ export default function () {
 				style: 'btn btn-sm btn-warning',
 				icon: 'fa fa-edit',
 			}, {
-				href: controlDelete('barang', value),
+				href: controlDelete(`barang/${value}`),
 				key: 'del'+value,
 				style: 'btn btn-sm btn-danger',
 				icon: 'fa fa-trash',
