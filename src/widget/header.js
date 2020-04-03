@@ -27,10 +27,6 @@ function HeaderLogon() {
           <i className="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i>
           Beranda
         </Link>
-        <Link className="dropdown-item" to={`/${session.login.role}/profil`}>
-          <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profil
-        </Link>
         <div className="dropdown-divider"></div>
         <Link className="dropdown-item" to="/logout">
           <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

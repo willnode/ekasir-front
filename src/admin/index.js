@@ -1,6 +1,5 @@
 import React from 'react';
 import Dashboard from './dashboard';
-import Profile from './profile';
 import Transaksi from './transaksi/list';
 import TransaksiDetail from './transaksi/detail';
 import TransaksiLaporan from './transaksi/laporan';
@@ -25,9 +24,6 @@ export default function () {
 			<Switch>
 				<Route exact path="/admin">
 					<Dashboard />
-				</Route>
-				<Route exact path="/admin/profil">
-					<Profile />
 				</Route>
 				<Route exact strict path="/admin/transaksi/">
 					<Transaksi />
